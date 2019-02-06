@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Alegreya Sans', sans-serif;
 }
 
 body {
@@ -85,24 +86,44 @@ body {
     list-style: none;
 }
 
+
+
 #wrapper header nav ul li a {
     text-decoration: none;
     color: #ff0;
     font-size: 28px;
 
     padding: 40px;
+    transition: 0.2s;
 }
 
+#wrapper header nav ul li a:hover {
+    text-decoration: none;
+    color: #ff0;
+    font-size: 38px;
+
+    padding: 40px;
+}
 
 /* -------------------------------------------LANDINGPAGE */
 #wrapper #landing {
 
+    height: 100vh;
     grid-column: 1/-1;
     grid-row: 1/3;
 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 60% 30% 1fr;
+
+    background-image: url(../assets/gfx/landing.jpg);
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
 
 }
 
@@ -124,9 +145,11 @@ body {
     grid-row: 2/3;
     overflow: hidden;
     background-image: linear-gradient(rgba(0, 0, 0, 0), black, rgba(0, 0, 0, 0));
+
 }
 
 #wrapper #landing h1 {
+    opacity: 0;
     grid-column: 1/-1;
     grid-row: 2/3;
     color: yellow;
@@ -134,6 +157,71 @@ body {
     font-size: 120px;
     margin-top: 70px;
     letter-spacing: 10px;
+    animation: fadeind 3s linear forwards;
+
+
+}
+
+
+#wrapper #landing h1 span {
+
+    display:block;  
+    color: yellow;
+    text-align: center;
+    font-size: 60px;
+    letter-spacing: 10px;
+    animation: fadeind 3s linear forwards;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), black, rgba(0, 0, 0, 0));
+
+
+
+}
+
+
+
+
+#wrapper #landing h2 {
+    opacity: 0;
+    grid-column: 1/-1;
+    grid-row: 1/3;
+    color: yellow;
+    text-align: center;
+    font-size: 120px;
+    margin-top: 170px;
+    letter-spacing: 10px;
+    animation: fadefadetekst 5s linear forwards;
+    text-shadow: 0px 0px 25px rgba(0, 0, 0, 1);
+    
+
+
+}
+
+@keyframes fadeind {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadefadetekst {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /* ----------------------------------------------------------INFO */
@@ -146,7 +234,8 @@ body {
 
     display: grid;
     grid-template-columns: 65% 30% 1fr;
-    grid-template-rows: 5% 60% 1fr;
+    grid-template-rows: 15% 60% 1fr;
+
 }
 
 #wrapper #info img {
@@ -202,7 +291,8 @@ body {
     color: #ff0;
     background-color: black;
 
-    font-size: 30px;
+    text-align: center; 
+    font-size: 36px;
     padding-top: 10px;
     padding-left: 50px;
 }
@@ -242,11 +332,33 @@ body {
     margin: 10px;
 }
 
+#wrapper #design #chosehotel a {
+
+    font-size:20px;
+    color: #ff0;
+ 
+
+
+}
+
+#wrapper #design #chosehotel a:hover {
+
+    font-style: italic
+}
+
 #wrapper #design #selecthotel img {
     padding: 25px;
     width: 400px;
     height: 350px;
+    transition: 1s;
 }
+
+#wrapper #design #selecthotel img:hover {
+
+    width: 450px;
+    height: 400px;
+}
+
 
 #wrapper #design #selecthotel span {
     display: block;
@@ -273,7 +385,20 @@ body {
 
 #wrapper #design #selecthotel .italic {
     font-style: italic;
+    font-size: 24px;
 }
+
+
+#wrapper #design #selecthotel a {
+    color: #ff0;
+    text-decoration: none;
+}
+
+#wrapper #design #selecthotel a:hover {
+    color: #ff0;
+    text-decoration: underline;
+}
+
 
 #wrapper #design #selecthotel form {
     text-align: right;
@@ -285,6 +410,15 @@ body {
     color: #ff0;
     font-size: 25px;
     padding: 10px;
+    margin: 5px;
+    transition: 1s;
+}
+
+#wrapper #design #selecthotel form button:hover {
+    background-color: #464646;
+    color: #ff0;
+    font-size: 25px;
+    padding: 20px;
     margin: 5px;
 }
 
@@ -310,6 +444,20 @@ body {
     padding-right: 30px;
 }
 
+#wrapper #design #eventbanner a {
+
+    font-size:20px;
+    color: #ff0;
+
+
+
+}
+
+#wrapper #design #eventbanner a:hover {
+
+
+    font-style: italic
+}
 
 #wrapper #design #choseevent {
     display: flex;
@@ -327,7 +475,18 @@ body {
     padding: 25px;
     width: 400px;
     height: 350px;
+    transition: 1s;
 }
+
+
+#wrapper #design #choseevent img:hover {
+
+    width: 450px;
+    height: 400px;
+}
+
+
+
 
 #wrapper #design #choseevent span {
     display: block;
@@ -354,7 +513,20 @@ body {
 
 #wrapper #design #choseevent .italic {
     font-style: italic;
+    font-size: 24px;
 }
+
+
+#wrapper #design #choseevent a {
+    color: #ff0;
+    text-decoration: none;
+}
+
+#wrapper #design #choseevent a:hover {
+    color: #ff0;
+    text-decoration: underline;
+}
+
 
 #wrapper #design #choseevent form {
     text-align: right;
@@ -366,6 +538,16 @@ body {
     color: #ff0;
     font-size: 25px;
     padding: 10px;
+    margin: 5px;
+    transition: 1s;
+}
+
+
+#wrapper #design #choseevent form button:hover {
+    background-color: #464646;
+    color: #ff0;
+    font-size: 25px;
+    padding: 20px;
     margin: 5px;
 }
 
@@ -382,7 +564,7 @@ body {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 800px 100px;
+    grid-template-rows: 100px 800px 100px;
 }
 
 
@@ -397,6 +579,20 @@ body {
     padding-left: 100px;
     padding-top: 10px;
 
+}
+
+#wrapper #pakkerejser #pakkerejserinfo a {
+
+    font-size:20px;
+    color: #ff0;
+
+
+
+}
+
+#wrapper #pakkerejser #pakkerejserinfo a:hover {
+
+    font-style: italic
 }
 
 #wrapper #pakkerejser #completechoises {
@@ -432,10 +628,14 @@ body {
 }
 
 #wrapper #pakkerejser #completechoises img {
-    padding: 25px;
+
     width: 400px;
     height: 350px;
 }
+
+
+
+
 
 
 #wrapper #pakkerejser #completechoises #completeone {
@@ -458,6 +658,21 @@ body {
 }
 
 
+
+#wrapper #pakkerejser #completechoises a {
+    color: #ff0;
+    text-decoration: none;
+}
+
+#wrapper #pakkerejser #completechoises a:hover {
+    color: #ff0;
+    text-decoration: underline;
+}
+
+
+
+
+
 #wrapper #pakkerejser #completechoises form {
     text-align: right;
     margin-right: 20px;
@@ -469,7 +684,17 @@ body {
     font-size: 25px;
     padding: 10px;
     margin: 5px;
+    transition: 1s;
 }
+
+#wrapper #pakkerejser #completechoises form button:hover {
+    background-color: #464646;
+    color: #ff0;
+    font-size: 25px;
+    padding: 20px;
+    margin: 5px;
+}
+
 
 #wrapper #pakkerejser #completechoises #flexbox p {
     font-size: 22px;
@@ -482,7 +707,9 @@ body {
 
 #wrapper #pakkerejser #completechoises #flexbox .italic {
     font-style: italic;
+    font-size: 24px;
 }
+
 
 /* --------------------------------------------------LINKS */
 
@@ -503,12 +730,12 @@ body {
 #wrapper #link #linkheader {
 
     grid-column: 1/-1;
-    grid-row:1/2;
+    grid-row: 1/2;
 
-    background-color:black;
-    color:#ff0;
+    background-color: black;
+    color: #ff0;
     text-align: center;
-    font-size:32px;
+    font-size: 32px;
     letter-spacing: 5px;
 }
 
@@ -520,22 +747,53 @@ body {
 }
 
 #wrapper #link #linkimgcollection figure {
-    width:33.33%;
-
-
-    position:relative;
+    width: 33.33%;
+    position: relative;
+    overflow: hidden;
+    z-index: 20;
+    transition: 0.2s;
 }
 
 
-#wrapper #link #linkimgcollection figcaption {
+#wrapper #link #linkimgcollection figure:hover {
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+
+    z-index: 30;
+    -webkit-box-shadow: 0px 0px 73px 43px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 73px 43px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 73px 43px rgba(0, 0, 0, 0.75);
+}
+
+
+#wrapper #link #linkimgcollection figure figcaption {
     position: absolute;
-    top:0;
-    left:0;
-} 
+    top: 0%;
+    left: -300%;
+    color: #ff0;
+
+    transition: 0.5s;
+
+}
+
+#wrapper #link #linkimgcollection figure:hover figcaption {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+
+    font-size: 28px;
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(0, 0, 0, 0.568);
+    padding: 30px;
+    border: 3px solid gainsboro;
+}
+
 
 #wrapper #link #linkimgcollection figure img {
-    width:100%;
-    height:90%;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -544,6 +802,7 @@ body {
 
 #wrapper footer {
 
+    padding-top: 50px;
     grid-column: 1/-1;
     grid-row: 7/8;
 
@@ -564,35 +823,44 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
 
-    
+
 }
 
-#wrapper footer #additionallink ul{
+#wrapper footer #additionallink ul {
 
     grid-column: 1/-1;
     grid-row: 1/2;
     display: flex;
 }
 
-#wrapper footer #additionallink ul li{
+#wrapper footer #additionallink ul li {
 
-list-style: none;
-margin-top:10px;
-margin-left:50px;
+    list-style: none;
+    margin-top: 10px;
+    margin-left: 50px;
 }
 
-#wrapper footer #additionallink ul li a{
+#wrapper footer #additionallink ul li a {
 
     text-decoration: none;
-    color:#ff0;
-    font-size: 28px;    
-    }
-    
+    color: #ff0;
+    font-size: 28px;
+    transition: 0.2s;
+}
 
-#wrapper footer #additionallink figure{
+#wrapper footer #additionallink ul li a:hover {
+
+    text-decoration: none;
+    color: #ff0;
+    font-size: 36px;
+}
+
+
+
+#wrapper footer #additionallink figure {
     grid-column: 1/-1;
     grid-row: 2/-1;
-    margin-left:50px;
+    margin-left: 50px;
     margin-top: 10px;
 
 }
@@ -607,20 +875,20 @@ margin-left:50px;
 }
 
 #wrapper footer #form h2 {
-    color:#ff0;
-    margin-left:5px;
+    color: #ff0;
+    margin-left: 5px;
 }
 
 #wrapper footer #form input {
     display: block;
-    margin:5px;
+    margin: 5px;
 
-    width:80%;
-    height:30px;
+    width: 80%;
+    height: 30px;
 }
 
 
 #wrapper footer #form button {
-    margin-left:70%;
-    padding:5px;
+    margin-left: 70%;
+    padding: 5px;
 }
